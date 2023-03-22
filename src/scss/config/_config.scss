@@ -1,0 +1,28 @@
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    drawer: 992px
+);
+
+$fontFamily: (
+    base: #{'Noto Sans JP',sans-serif},
+    main: #{'Roboto',sans-serif},
+    accent: #{'Bowlby One', cursive},
+);
+
+$fontWeights: (
+    thin: 100,
+    extraLight: 200,
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semiBold: 600,
+    bold: 800,
+    black: 900
+);
+
+$yellow: #fae600;
+$purple: #5519fa;

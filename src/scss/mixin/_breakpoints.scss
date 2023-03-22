@@ -1,0 +1,10 @@
+@use '../config/config';
+
+// media query
+@mixin mediaMin($breakpoint) {
+    $width: map-get(config.$breakpoints, $breakpoint);
+
+    @media (min-width: $width) {
+        @content;
+    }
+}

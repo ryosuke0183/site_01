@@ -1,0 +1,30 @@
+@use '../forward';
+@use 'sass:math';
+
+.mv {
+    background: rgb(150, 114, 248);
+    background: linear-gradient(180deg, rgba(150, 114, 248, 1) 0%, rgba(74, 164, 252, 0) 70%, rgba(0, 212, 255, 0) 100%);
+
+    &__cont {
+        text-align: right;
+        position: absolute;
+        right: 40px;
+        bottom: 0;
+    }
+
+    &__h1 {
+        margin-bottom: 15px;
+        @include forward.font(accent, regular);
+        font-size: forward.rem(20px);
+        line-height: math.div(27, 30);
+
+        &>b {
+            font-size: forward.rem(30px);
+        }
+    }
+
+    &__para {
+        margin-bottom: 16px;
+        @include forward.font(accent, regular);
+    }
+}

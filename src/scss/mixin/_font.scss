@@ -1,0 +1,6 @@
+@use '../config/config';
+
+@mixin font($type, $weight) {
+    font-family: map-get(config.$fontFamily, $type);
+    font-weight: map-get(config.$fontWeights, $weight);
+}

@@ -1,0 +1,6 @@
+@use '../config/config';
+
+@function color($color, $opacity: 1) {
+    $color: rgba($color, $opacity);
+    @return $color;
+}

@@ -1,0 +1,25 @@
+@use '../config/config';
+@use 'sass:math';
+
+@function strip-unit($number) {
+    @if type-of($number)=='number' and not unitless($number) {
+        @return math.div($number, ($number * 0 + 1));
+    }
+
+    @return $number;
+}
+
+//   px -> rem
+@function rem($px, $base: 16px) {
+    $value: $px;
+
+    @if (unit($px) !='px') {
+        @warn 'do not use except px';
+        @return $value;
+    }
+
+    $value: (
+        math.div(strip-unit($px), strip-unit($base))) * 1rem;
+
+    @return $value;
+}

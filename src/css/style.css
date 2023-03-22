@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+  font-family: Bowlby One, cursive;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.btn--small {
+  font-size: 1.25rem;
+  padding: 17px 22px;
+}
+.btn--medium {
+  font-size: 1.875rem;
+  padding: 20px;
+}
+.btn--yellow {
+  color: #5519fa;
+  background-color: #fae600;
+  position: relative;
+  box-shadow: -5px 5px black;
+  transition: 0.5s;
+}
+.btn--yellow:hover {
+  box-shadow: none;
+  transform: translate(-5px, 5px);
+  transition: 0.5s;
+}
+
+.nav {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header__inner {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media (min-width: 992px) {
+  .header__inner {
+    padding: 40px;
+  }
+}
+
+.mv {
+  background: rgb(150, 114, 248);
+  background: linear-gradient(180deg, rgb(150, 114, 248) 0%, rgba(74, 164, 252, 0) 70%, rgba(0, 212, 255, 0) 100%);
+}
+.mv__cont {
+  text-align: right;
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+}
+.mv__h1 {
+  margin-bottom: 15px;
+  font-family: Bowlby One, cursive;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 0.9;
+}
+.mv__h1 > b {
+  font-size: 1.875rem;
+}
+.mv__para {
+  margin-bottom: 16px;
+  font-family: Bowlby One, cursive;
+  font-weight: 400;
+}/*# sourceMappingURL=style.css.map */

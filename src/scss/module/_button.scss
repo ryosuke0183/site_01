@@ -1,0 +1,37 @@
+@use '../forward';
+
+%btn {
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    @include forward.font(accent, regular);
+    line-height: 1;
+}
+
+.btn {
+    @extend %btn;
+
+    &--small {
+        font-size: forward.rem(20px);
+        padding: 17px 22px;
+    }
+
+    &--medium {
+        font-size: forward.rem(30px);
+        padding: 20px;
+    }
+
+    &--yellow {
+        color: forward.color(forward.$purple);
+        background-color: forward.color(forward.$yellow);
+        position: relative;
+        box-shadow: -5px 5px black;
+        transition: 0.5s;
+
+        &:hover {
+            box-shadow: none;
+            transform: translate(-5px, 5px);
+            transition: 0.5s;
+        }
+    }
+}
