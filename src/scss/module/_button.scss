@@ -1,29 +1,39 @@
-@use '../forward';
+@use '../forward' as *;
 
 %btn {
     display: inline-block;
     text-align: center;
     border-radius: 5px;
-    @include forward.font(accent, regular);
+    @include font(accent, regular);
     line-height: 1;
 }
 
 .btn {
     @extend %btn;
 
+    
     &--small {
-        font-size: forward.rem(20px);
+        font-size: rem(16px);
         padding: 17px 22px;
+
+        @include mediaMin(md) {
+            font-size: rem(20px);
+        }
+
     }
 
     &--medium {
-        font-size: forward.rem(30px);
+        font-size: rem(18px);
         padding: 20px;
+
+        @include mediaMin(md) {
+            font-size: rem(30px);
+        }
     }
 
     &--yellow {
-        color: forward.color(forward.$purple);
-        background-color: forward.color(forward.$yellow);
+        color: color($purple);
+        background-color: color($yellow);
         position: relative;
         box-shadow: -5px 5px black;
         transition: 0.5s;

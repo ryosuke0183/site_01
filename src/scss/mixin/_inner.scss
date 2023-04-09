@@ -1,0 +1,14 @@
+@use '../mixin/breakpoints' as *;
+
+@mixin inner($maxWidth) {
+    max-width: calc($maxWidth + 80px);
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    @include mediaMin(md) {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
